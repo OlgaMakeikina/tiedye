@@ -1,0 +1,17 @@
+
+.filter-categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog {
+    background-color: #FF6F61;
+    padding: 5px;
+
+}
+.filter-header {
+    text-align: center;
+}
+.filter {
+    background-color: antiquewhite;
+}
