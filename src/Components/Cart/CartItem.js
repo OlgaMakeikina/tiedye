@@ -1,4 +1,4 @@
-import DataItem from '../../data/DataItem';
+import DataItem from '../../data/dataItem';
 import { removeItemFromCart } from '../../redux/cartSlice';
 import { useDispatch } from 'react-redux';
 import './Cart.css'
@@ -16,7 +16,7 @@ const CartItem = ({cartItem}) => {
        <p>{cartItem.quantity}</p> 
        <p>$ {products.price * cartItem.quantity}</p>
        <span onClick={() => dispatch(removeItemFromCart({cartItemId: cartItem.id}))}>
-       <img className="icon" src="https://img.icons8.com/material-outlined/48/000000/trash--v1.png" width="20px"/> 
+       <img className="icon" src="https://img.icons8.com/material-outlined/48/000000/trash--v1.png" width="20px" alt="icon"/> 
         </span>
         </div>  
     )

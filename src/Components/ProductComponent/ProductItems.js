@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getSelectedCategory, getSelectedSize, getMinPrice, getMaxPrice } from '../../redux/productSlice';
-import DataItem from '../../data/DataItem';
+import DataItem from '../../data/dataItem';
 import Product from './Product'; 
 
 const ProductItems = () => {
