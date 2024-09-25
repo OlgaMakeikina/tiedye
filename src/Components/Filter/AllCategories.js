@@ -10,7 +10,7 @@ const AllCategories = () => {
   const dispatch = useDispatch();
   const selectedCategory = useSelector(getSelectedCategory);
   const selectedSize = useSelector(getSelectedSize);
-  const [priceRange, setPriceRange] = useState([0, 500]); // Начальный диапазон цен
+  const [priceRange, setPriceRange] = useState([0, 500]); 
 
   const categories = ['all', 'man', 'woman', 'child'];
   const sizes = ['P', 'PP', 'M', 'G', 'GG'];
@@ -20,12 +20,10 @@ const AllCategories = () => {
     dispatch(filterPrice({ minPrice: range[0], maxPrice: range[1] }));
   };
 
-  // Обработка изменения цен в input
   const handleInputChange = (index, value) => {
     const newPriceRange = [...priceRange];
     newPriceRange[index] = Number(value);
 
-    // Обновление диапазона, если значения в пределах допустимого диапазона
     if (newPriceRange[0] >= 0 && newPriceRange[0] <= 1000 && newPriceRange[1] >= 0 && newPriceRange[1] <= 1000) {
       setPriceRange(newPriceRange);
       dispatch(filterPrice({ minPrice: newPriceRange[0], maxPrice: newPriceRange[1] }));
@@ -36,7 +34,6 @@ const AllCategories = () => {
     <div className="filter">
       <h2 className="filter-header">Filter</h2>
 
-      {/* Фильтр по категориям */}
       <h2 className="catalog">Category</h2>
       <div className="filter-categories">
         {categories.map((category) => (
@@ -50,7 +47,6 @@ const AllCategories = () => {
         ))}
       </div>
 
-      {/* Фильтр по размерам */}
       <h2 className="catalog">Size</h2>
       <div className="filter-sizes">
         {sizes.map((size) => (
